@@ -7,7 +7,7 @@ const projects = [
       "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695360807/personal-web/g308tmwnt4dkltehvlrl.jpg",
     description:
       "You can find information on Peruvian gastronomy , Peruvian products  as well as a guide for doing business and investing in Peru.",
-	stack: ["Astro", "Tailwind CSS", "Vercel"]
+	stack: ["Astro", "Tailwind CSS", "Vercel", "Sanity.io"]
   },
   {
     name: "GYC Corp",
@@ -40,12 +40,15 @@ const projects = [
 ];
 import { Image } from "astro:assets";
 ---
-
+<div class="max-w-screen-xl mx-auto">
+<h2 class="text-2xl font-bold tracking-tight text-gray-800 dark:text-white px-4">
+	Projects </h2>
+</div>
 <section class="max-w-screen-xl flex flex-col md:flex-row flex-wrap items-center justify-around mx-auto p-4 ">
   {
     projects.map((project) => (
       <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 w-full md:w-1/2 max-w-xs">
-        <a href="#">
+        <a href={project.url}>
           <Image
             src={project.urlImage}
             alt={project.name}
@@ -53,13 +56,13 @@ import { Image } from "astro:assets";
             height="150"
           />
         </a>
-        <div class="p-5">
-          <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <div class="p-3 md:p-5">
+          <a href={project.url}>
+            <h5 class="mb:1 md:mb-2 text-base md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {project.name}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 hidden md:block">
             {project.description}
           </p>
         </div>
@@ -68,7 +71,6 @@ import { Image } from "astro:assets";
 		<span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{item}</span>
 		))
 		}
-		
 		</div>
       </div>
     ))
