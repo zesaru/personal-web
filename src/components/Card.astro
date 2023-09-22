@@ -1,16 +1,54 @@
 ---
-const projects = ["PeruinJapan", "GYC Corp", "SIAME", "Embassy of Peru"];
+const projects = [
+  {
+    name: "PeruinJapan",
+	url: "https://www.peruinjapan.org/",
+    urlImage:
+      "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695360807/personal-web/g308tmwnt4dkltehvlrl.jpg",
+    description:
+      "You can find information on Peruvian gastronomy , Peruvian products  as well as a guide for doing business and investing in Peru.",
+	stack: ["Astro", "Tailwind CSS", "Vercel"]
+  },
+  {
+    name: "GYC Corp",
+	url: "https://www.gyc-corp.com/",
+    urlImage:
+      "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695341623/personal-web/pvubqicnfozqh8iuxenk.avif",
+    description:
+      "A company dedicated to the field of Importation, distribution, logistics operations, and investment projects within the Japanese archipelago.",
+	stack: ["Gastby", "Style Components", "Contentfull"]
+  },
+  {
+    name: "EmbassyofPeruinJapan",
+	url: "https://peruinjapan.netlify.app/",
+    urlImage:
+      "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695282743/personal-web/o5bit3xliv9vf8qgg7t6.avif",
+    description:
+      "The former 2021 website of the Embassy of Peru in Japan, dedicated to promoting various initiatives and events aimed at showcasing Peru",
+	stack: ["Gastby", "Style Components", "Contentfull"]
+  },
+  {
+    name: "Intranet Embassy",
+	url: "https://peruinjapan.netlify.app/",
+    urlImage:
+      "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695341623/personal-web/gw43ijqmchs2zeyzhgfu.avif",
+    description:
+      "The former 2021 website of the Embassy of Peru in Japan, dedicated to promoting various initiatives and events aimed at showcasing Peru",
+	stack: ["Sympony", "Mysql", "PHP"]
+  },
+
+];
 import { Image } from "astro:assets";
 ---
 
-<section class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+<section class="max-w-screen-xl flex flex-col md:flex-row flex-wrap items-center justify-around mx-auto p-4 ">
   {
     projects.map((project) => (
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 w-full md:w-1/2">
+      <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 w-full md:w-1/2 max-w-xs">
         <a href="#">
           <Image
-            src="https://res.cloudinary.com/dcajzjjmh/image/upload/v1695282743/personal-web/o5bit3xliv9vf8qgg7t6.avif"
-            alt="descriptive text"
+            src={project.urlImage}
+            alt={project.name}
             width="400"
             height="150"
           />
@@ -18,17 +56,22 @@ import { Image } from "astro:assets";
         <div class="p-5">
           <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {project}
+              {project.name}
             </h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            You can find information on Peruvian gastronomy (list of
-            restaurants, suppliers, recipes for typical dishes), Peruvian
-            products (coffee and pisco) as well as a guide for doing business
-            and investing in Peru.
+            {project.description}
           </p>
         </div>
+		<div class="m-2 flex gap-1">
+		{ project.stack.map ((item) => (
+		<span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{item}</span>
+		))
+		}
+		
+		</div>
       </div>
     ))
   }
 </section>
+
