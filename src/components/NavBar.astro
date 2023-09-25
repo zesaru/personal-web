@@ -1,5 +1,5 @@
 ---
-const navLinks = ["Home", "Projects", "About", "Contact"];
+import {navLinks }  from "../data/menu.json";
 ---
 
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -41,11 +41,11 @@ const navLinks = ["Home", "Projects", "About", "Contact"];
             return (
               <li>
                 <a
-                  href="#"
+                  href={link.href}
                   class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:text-gray-900 md:p-0"
                   aria-current="page"
                 >
-                  {link}
+                  {link.name}
                 </a>
               </li>
             );

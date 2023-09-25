@@ -1,0 +1,49 @@
+{
+    "projects": [
+       {
+          "name": "PeruinJapan",
+          "url": "https://www.peruinjapan.org/",
+          "urlImage": "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695360807/personal-web/g308tmwnt4dkltehvlrl.jpg",
+          "description": "You can find information on Peruvian gastronomy , Peruvian products  as well as a guide for doing business and investing in Peru.",
+          "stack": [
+             "Nextjs",
+             "Tailwind CSS",
+             "Vercel",
+             "Sanity.io"
+          ]
+       },
+       {
+          "name": "GYC Corp",
+          "url": "https://www.gyc-corp.com/",
+          "urlImage": "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695341623/personal-web/pvubqicnfozqh8iuxenk.avif",
+          "description": "A company dedicated to the field of Importation, distribution, logistics operations, and investment projects within the Japanese archipelago.",
+          "stack": [
+             "Gastby",
+             "Style Components",
+             "Contentfull"
+          ]
+       },
+       {
+          "name": "EmbassyofPeruinJapan",
+          "url": "https://peruinjapan.netlify.app/",
+          "urlImage": "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695282743/personal-web/o5bit3xliv9vf8qgg7t6.avif",
+          "description": "The former 2021 website of the Embassy of Peru in Japan, dedicated to promoting various initiatives and events aimed at showcasing Peru",
+          "stack": [
+             "Gastby",
+             "Style Components",
+             "Contentfull"
+          ]
+       },
+       {
+          "name": "Intranet Embassy",
+          "url": "https://peruinjapan.netlify.app/",
+          "urlImage": "https://res.cloudinary.com/dcajzjjmh/image/upload/v1695341623/personal-web/gw43ijqmchs2zeyzhgfu.avif",
+          "description": "The former 2021 website of the Embassy of Peru in Japan, dedicated to promoting various initiatives and events aimed at showcasing Peru",
+          "stack": [
+             "Sympony",
+             "Mysql",
+             "PHP"
+          ]
+       }
+    ]
+ }

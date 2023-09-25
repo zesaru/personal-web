@@ -1,13 +1,44 @@
 ---
-import dev from '../assets/skills.svg';
+import dev from "../assets/skills.svg";
 ---
 
-<section class="md:max-w-screen-xl flex md:flex-row flex-col md:flex-wrap items-center justify-between mx-auto p-4">
-    <div class="md:w-1/2">
-        <img src={dev.src} width={dev.width} height={dev.height} alt="image developer peru t-shirt" />
-    </div>
-    <div class="md:w-1/2">
-        <h2 class="leading-loose text-lg" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt quo quibusdam facilis fugiat veniam aliquid corporis sed odio. Neque assumenda voluptas molestiae est voluptatum aliquam totam earum possimus. Molestias, quas!</h2>
-        
-    </div>
+<div class="max-w-screen-xl mx-auto" id="about">
+  <h2
+    class="text-2xl font-bold tracking-tight text-gray-800 dark:text-white px-4"
+  >
+    More about me
+  </h2>
+</div>
+<section
+  class="md:max-w-screen-xl flex md:flex-row flex-col md:flex-wrap items-center justify-between mx-auto p-4"
+>
+  <div class="md:w-1/2">
+    <img
+      src={dev.src}
+      width={dev.width}
+      height={dev.height}
+      alt="image developer peru t-shirt"
+    />
+  </div>
+  <div class="md:w-1/2">
+    <h3 class="leading-loose text-lg py-1"><strong>Key Skills:</strong></h3>
+    <p>
+      "I'm from Peru, and since 2005, I've been working in the Japanese
+      archipelago providing IT technical support services to various
+      organizations."
+    </p>
+    <ul>
+      <li>Help Desk and Technical Support</li>
+      <li>Software Development</li>
+      <li>Network and Infrastructure Administration</li>
+      <li>Cybersecurity</li>
+      <li>Technology Consulting</li>
+    </ul>
+    <h3 class="leading-loose text-lg py-2"><strong>Languages:</strong></h3>
+    <ul>
+      <li>Spanish: Native</li>
+      <li>English: Intermediate</li>
+      <li>Japanese: Basic</li>
+    </ul>     
+  </div>
 </section>
