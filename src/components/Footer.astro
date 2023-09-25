@@ -1,0 +1,18 @@
+---
+import { getImage } from "astro:assets";
+import myBackground from "../assets/lima.svg";
+const optimizedBackground = await getImage({src: myBackground, format: 'svg'})
+
+---
+<div class="bg-cover bg-center m-2" style={`background-image: url(${optimizedBackground.src});`}>
+<footer class="md:max-w-screen-xl flex md:flex-row flex-col md:flex-wrap items-center justify-between mx-auto">
+    <div class="md:w-1/2 py-16 md:py-32">
+        <p class="leading-loose text-lg py-4"><strong>Cesar Murillo</strong></p>
+        <p>© All rights are reserved | 2023</p>
+        <p>Icons made by Freepik from www.flaticon.com</p>
+    </div>
+    <div class="md:w-1/2">
+        
+    </div>
+</footer>
+</div>
